@@ -1,0 +1,50 @@
+{
+    "lang": "nl",
+    "homepage": {
+        "weather_title": "Weer in Almere",
+        "location": "Locatie:",
+        "temperature": "Temperatuur:",
+        "wind": "Wind:",
+        "humidity": "Luchtvochtigheid:",
+        "last_updated": "Laatste update:",
+        "last_updated_between": "om" 
+    },
+    "sensor": {
+        "dropdown": {
+            "h2": "Laatste 2 uur",
+            "h24": "Laatste 24 uur",
+            "w1": "Laatste week",
+            "m1": "Laatste maand",
+            "y1": "Laatste jaar"
+        },
+        "temperature": "Temperatuur",
+        "humidity": "Luchtvochtigheid",
+        "compare": "Vergelijk materialen",
+        "current_readings": "Actuele metingen",
+        "top": "Boven",
+        "middle": "Midden",
+        "bottom": "Onder",
+        "chart": {
+            "impact": "Milieu-impact over de hele levensduur",
+            "geolocation": "Geografische herkomst",
+            "health_impact": "Gezondheidsimpact",
+            "reuseability": "Mate van hergebruik",
+            "recyclability": "Recyclaatgehalte",
+            "co2_emissions": "CO2-uitstoot tijdens productie",
+            "co2_holding": "CO2-opslag in materiaal",
+            "biobased": "Biobased percentage"
+        }
+    },
+    "compare": {
+        "dropdown": {
+            "h2": "Laatste 2 uur",
+            "h24": "Laatste 24 uur",
+            "w1": "Laatste week",
+            "m1": "Laatste maand",
+            "y1": "Laatste jaar"
+        },
+        "temperature": "Temperatuur",
+        "humidity": "Luchtvochtigheid",
+        "back": "Terug"
+    }
+}

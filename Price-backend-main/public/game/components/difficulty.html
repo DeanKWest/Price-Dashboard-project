@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kies moeilijkheidsgraad</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+  <!-- Gekozen karakter bovenaan -->
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="" style="display: none;">
+  </div>
+
+  <div class="containern">
+    <h2 style="text-align: center;">Kies een moeilijkheidsgraad</h2>
+    <div class="difficulty-options">
+      <button class="difficulty-btn" data-difficulty="easy">Makkelijk</button>
+      <button class="difficulty-btn" data-difficulty="hard">Moeilijk</button>
+    </div>
+  </div>
+
+  <script>
+    // Toon gekozen karakter bovenaan
+    const avatar = document.getElementById('selectedAvatar');
+    const charImage = localStorage.getItem('characterImage');
+    if (charImage) {
+      avatar.src = charImage;
+      avatar.style.display = 'block';
+    }
+
+    // Haal gekozen spel uit de URL (default: quiz)
+    const params = new URLSearchParams(window.location.search);
+    const game = params.get('game') || 'quiz';
+
+    // Voeg event listeners toe aan de moeilijkheidsknoppen
+    document.querySelectorAll('.difficulty-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        localStorage.setItem('difficulty', this.dataset.difficulty);
+
+        // In freeplay: ga naar het gekozen spel
+        if (localStorage.getItem('freeplay') === 'true') {
+          if (game === 'quiz') window.location.href = 'quiz.html';
+          else if (game === 'draggame') window.location.href = 'draggame.html';
+          else if (game === 'matchgame') window.location.href = 'matchgame.html';
+          else if (game === 'WatHoortNietThuis') window.location.href = 'WatHoortNietThuis.html';
+        } else {
+          // In story-modus: ga altijd naar quiz.html (of pas aan voor jouw flow)
+          window.location.href = 'quiz.html';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Speel los</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="containern" style="margin-top: 100px;">
+    <h2>Kies een spel om los te spelen</h2>
+    <button onclick="window.location.href='difficulty.html?game=quiz'" class="start-btn">Quiz</button>
+    <button onclick="window.location.href='difficulty.html?game=draggame'" class="start-btn" style="margin-left: 20px;">VlinderTinder</button>
+    <button onclick="window.location.href='difficulty.html?game=matchgame'" class="start-btn" style="margin-left: 20px;">Herkomst</button>
+    <button onclick="window.location.href='difficulty.html?game=WatHoortNietThuis'" class="start-btn" style="margin-left: 20px;">Wat hoort er niet thuis</button>
+    <p style="margin-top:30px;">Let op: de duurzaamheidsmeter wordt niet bijgehouden in deze modus.</p>
+  </div>
+  <script>
+  // Zet de duurzaamheidsmeter uit in freeplay
+  localStorage.removeItem('progressPercent');
+  localStorage.setItem('freeplay', 'true');
+
+  // Kies direct een random character voor freeplay
+  const characters = [
+    { name: "avonturier", image: "../assests/characters/avonturier.png" },
+    { name: "held", image: "../assests/characters/held.png" },
+    { name: "wetenschapper", image: "../assests/characters/wetenschapper.png" }
+  ];
+  const randomChar = characters[Math.floor(Math.random() * characters.length)];
+  localStorage.setItem('characterImage', randomChar.image);
+  localStorage.setItem('characterName', randomChar.name);
+</script>
+</body>
+</html>

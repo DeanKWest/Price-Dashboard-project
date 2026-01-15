@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Match de Materialen</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+  <!-- Avatar rechtsboven -->
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="">
+  </div>
+<script>
+  // Verberg de duurzaamheidsmeter als je uit freeplay komt
+  if (window.location.pathname.includes('freeplay')) {
+    localStorage.setItem('freeplay', 'true');
+  }
+</script>
+  <!-- Topbalk met duurzaamheidbalk en timer -->
+  <div id="top-bar">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+      <div id="progress-text" class="progress-text">0%</div>
+    </div>
+    <div id="timer" class="timer">60s</div>
+  </div>
+
+  <div class="containern">
+    <!-- Titel -->
+    <h2 class="game-title">Verbind het materiaal met de oorsprong</h2>
+
+    <!-- Canvas voor lijnen -->
+    <canvas id="lineCanvas" width="1600" height="1000"></canvas>
+
+    <!-- Matchingsgebied -->
+    <div class="match-container">
+      <div class="column" id="left-column"></div>
+      <div class="column" id="right-column"></div>
+    </div>
+
+    <!-- Feedback -->
+    <div id="feedback" class="feedback"></div>
+  </div>
+
+  <script src="matchgame.js"></script>
+</body>
+</html>

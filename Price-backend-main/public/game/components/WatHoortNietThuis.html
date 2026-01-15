@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Wat hoort niet thuis?</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="">
+  </div>
+
+  <div class="container">
+    <div id="vraag-container">
+      <h2 id="vraag-tekst">Wat hoort niet thuis?</h2>
+      <div id="opties-container"></div>
+      <div id="feedback" style="margin-top: 10px;"></div>
+      <div id="timer" style="margin-top: 10px; font-weight: bold;">Tijd: 30s</div>
+    </div>
+
+    <div class="progress-wrapper">
+      <span>Duurzaamheidsbalk</span>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+  <script src="WatHoortNietThuis.js"></script>
+</body>
+</html>

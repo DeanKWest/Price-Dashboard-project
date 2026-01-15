@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <script>
+    // Verberg de duurzaamheidsmeter als je uit freeplay komt
+    if (window.location.pathname.includes('freeplay')) {
+      localStorage.setItem('freeplay', 'true');
+    }
+  </script>
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="">
+  </div>
+
+  <div class="containern">
+    <div id="vraag-container">
+      <h2 id="vraag-tekst">Vraag komt hier</h2>
+      <div id="antwoorden-container"></div>
+      <div id="feedback" style="margin-top: 10px;"></div>
+      <div id="timer" style="margin-top: 10px; font-weight: bold;">Tijd: 30s</div>
+
+    </div>
+
+    <div class="progress-wrapper">
+      <span>Duurzaamheidsbalk</span>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+        <div class="progress-text" id="progress-text">0%</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>

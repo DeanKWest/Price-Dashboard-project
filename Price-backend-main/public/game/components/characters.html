@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kies je karakter</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="" style="display: none;">
+  </div>
+
+  <div class="containern">
+    <h2 style="text-align: center;">Kies een karakter</h2>
+    <div class="character-options">
+      <div class="character" data-char="held">
+        <img src="../assests/characters/held.png" alt="Held">
+        <p>MINDY</p>
+      </div>
+      <div class="character" data-char="wetenschapper">
+        <img src="../assests/characters/wetenschapper.png" alt="Wetenschapper">
+        <p>MIKE</p>
+      </div>
+      <div class="character" data-char="avonturier">
+        <img src="../assests/characters/avonturier.png" alt="Avonturier">
+        <p>BLOB</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const characters = document.querySelectorAll('.character');
+
+    characters.forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.dataset.char;
+        const imgSrc = card.querySelector('img').getAttribute('src');
+
+        localStorage.setItem('characterName', name);
+        localStorage.setItem('characterImage', imgSrc);
+
+        window.location.href = 'difficulty.html';
+      });
+    });
+  </script>
+</body>
+</html>

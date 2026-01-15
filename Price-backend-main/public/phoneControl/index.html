@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Control</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="pin-container" id="pin-container">
+        <img src="../images/logo.png" alt="PRICE">
+        <form id="pin-form">
+            <input type="number" name="pin-input" id="pin-input" placeholder="Voer PIN in" required>
+            <input type="submit" value="Log in">
+        </form>
+    </div>
+    <main>
+        <h1 id="socket-status" style="color: red;">Verbinding verbroken</h1>
+        <div class="buttons-container">
+            <h2>Pagina's</h2>
+            <div class="buttonrow">
+                <button onclick="goToPage('sensors/4')" id="sensor4">Sensor 4</button>
+                <button onclick="goToPage('sensors/1')" id="sensor1">Sensor 1</button>
+                <button onclick="goToPage('sensors/2')" id="sensor2">Sensor 2</button>
+                <button onclick="goToPage('sensors/3')" id="sensor3">Sensor 3</button>
+                <button onclick="goToPage('sensors/0')" id="sensor0">Sensor 0</button>
+                <button onclick="goToPage('compare')">Vergelijk</button>
+                <button onclick="goToPage('home')">Home</button>
+                <button onclick="toggleSlideshow()">Slideshow</button>
+            </div>
+            <h2>Knoppen</h2>
+            <div class="buttonrow">
+                <button onclick="clickButton('tempBtn')">Temperatuur</button>
+                <button onclick="clickButton('humBtn')">Luchtvochtigheid</button>
+                <button onclick="switchTimeRange(2)">Laatste 2 uur</button>
+                <button onclick="switchTimeRange(24)">Laatste 24 uur</button>
+                <button onclick="switchTimeRange(168)">Laatste week</button>
+                <button onclick="switchTimeRange(720)">Laatste maand</button>
+                <button onclick="switchTimeRange(8760)">Laatste jaar</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

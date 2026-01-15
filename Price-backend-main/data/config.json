@@ -1,0 +1,15 @@
+{
+    "port": 3000,
+    "weatherUpdateInterval": 120000,
+    "weatherApiKey": "90a22d4d0e2a4f769ae214648252303",
+    "xano": {
+        "refreshInterval": 120000,
+        "baseUrl": "https://xspu-p5k7-tjam.f2.xano.io",
+        "loginUrl": "/api:AJYNiMjQ/auth/login",
+        "sensorApiUrl": "/api:GSLMdsZr/ardino_sensor_api_V2",
+        "user": "expoprice@digilabflevoland.nl",
+        "pass": "yjJ9$dhjS5LTS3Ef"
+    },
+    "phoneControlPin": "123456",
+    "localIp": "192.0.0.2"
+}

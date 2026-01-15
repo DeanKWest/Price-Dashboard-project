@@ -1,0 +1,102 @@
+[
+  {
+    "vraag": "Wat is het belangrijkste verschil tussen compostering en anaerobe vergisting?",
+    "opties": [
+      "Compostering is sneller",
+      "Anaerobe vergisting gebeurt zonder zuurstof",
+      "Geen verschil",
+      "Compostering maakt biogas"
+    ],
+    "correct": 1
+  },
+  {
+    "vraag": "Wat is één reden waarom biodiversiteit een positieve impact heeft op de aarde?",
+    "opties": [
+      "Dieren veroorzaken geen CO₂-uitstoot",
+      "Bomen en planten nemen koolstofdioxide uit de lucht op, wat helpt tegen klimaatverandering",
+      "Dieren eten al het afval op",
+      "Biodiversiteit zorgt ervoor dat het niet meer regent"
+    ],
+    "correct": 1
+  },
+  {
+    "vraag": "Wat is het verschil tussen circulair ontwerpen voor hergebruik en downcycling?",
+    "opties": [
+      "Geen verschil",
+      "Circulair behoudt waarde door hergebruik van onderdelen, bij downcycling verliest het materiaal zijn oorspronkelijke kwaliteit",
+      "Downcycling is beter",
+      "Circulair is alleen voor plastic"
+    ],
+    "correct": 1
+  },
+  {
+    "vraag": "Wat is een voorbeeld van upcycling?",
+    "opties": [
+      "Een kapotte spijkerbroek omtoveren tot een tas",
+      "Een plastic fles weggooien",
+      "Een telefoon recyclen",
+      "Een houten tafel verbranden"
+    ],
+    "correct": 0
+  },
+  {
+    "vraag": "Wat is een voorbeeld van downcycling?",
+    "opties": [
+      "Een plastic fles omzetten in een nieuwe fles",
+      "Een oude jas repareren",
+      "Een laptop opnieuw gebruiken",
+      "Een houten tafel omzetten in spaanplaat"
+    ],
+    "correct": 3
+  },
+  {
+    "vraag": "Waarom is downcycling minder wenselijk dan hergebruik?",
+    "opties": [
+      "Het is duurder",
+      "Het kost meer tijd",
+      "De kwaliteit en waarde van het materiaal gaan omlaag",
+      "Het is moeilijker"
+    ],
+    "correct": 2
+  },
+  {
+    "vraag": "Wat meet je met je ecologische voetafdruk?",
+    "opties": [
+      "Hoeveel geld je uitgeeft aan duurzame producten",
+      "Hoeveel afval je per jaar produceert",
+      "Hoeveel ruimte op aarde nodig is voor jouw gewoontes en consumptie",
+      "Hoeveel CO₂ je uitstoot tijdens het reizen"
+    ],
+    "correct": 2
+  },
+  {
+    "vraag": "Waarom is circulaire economie belangrijk voor de toekomst?",
+    "opties": [
+      "Het zorgt voor meer afvalverbranding",
+      "Het helpt om grondstoffen te besparen en afval te verminderen",
+      "Het maakt producten duurder",
+      "Het voorkomt innovatie"
+    ],
+    "correct": 1
+  },
+  {
+    "vraag": "Wat gebeurt er in een circulair systeem met producten aan het einde van hun levensduur?",
+    "opties": [
+      "Ze worden weggegooid",
+      "Ze worden hergebruikt, gerepareerd of gerecycled",
+      "Ze worden opgeslagen voor later",
+      "Ze worden verbrand voor energie"
+    ],
+    "correct": 1
+  },
+  {
+    "vraag": "Waarom is lokale voedselproductie duurzamer?",
+    "opties": [
+      "Het is altijd goedkoper",
+      "Het smaakt beter",
+      "Het vermindert transport en CO₂-uitstoot",
+      "Het wordt beter verpakt"
+    ],
+    "correct": 2
+  }
+]

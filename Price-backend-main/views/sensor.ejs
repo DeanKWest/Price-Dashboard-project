@@ -1,0 +1,124 @@
+<%
+  // Mapping sensorId naar displayName
+  const sensorNamen = {
+    Sensor0: 'Huis temperatuur',
+    Sensor1: 'Hemkor',
+    Sensor2: 'Stro',
+    Sensor3: 'Cellulose',
+    Sensor4: 'Isovlas'
+  };
+  const sensorKey = `Sensor${sensorId}`;
+  const displayName = sensorNamen[sensorKey] || 'Onbekend materiaal';
+
+  // Metadata per materiaal
+  const materials = {
+    'Huis temperatuur': {
+      name: 'Huis temperatuur',
+      imageUrl: '/images/natuur.jpg',
+      description: 'Deze weergave toont de actuele binnentemperatuur en luchtvochtigheid gemeten door de Arduino-sensoren in de expositieruimte.',
+      stats: { lca: '-', mki: '-', biobased: '-', health: '-' }
+    },
+    'Hemkor': {
+      name: 'Hemkor',
+      imageUrl: '/images/hemkor.jpeg',
+      description: 'Hemkor is gemaakt van hennepvezels en andere natuurlijke vezels. Het is ademend, hernieuwbaar en heeft een relatief lage CO₂-voetafdruk (0,50 kg CO₂-eq/kg, 1,20 kg CO₂-eq/m²). Met 85% biobased inhoud biedt het goede thermische isolatie, maar moet vaak behandeld worden tegen brand en schimmel',
+      stats: { lca: '1,20 kg CO₂-eq/m²', mki: '€ 0,025/m²', biobased: '85%',  }
+    },
+    'Stro': {
+      name: 'Stro',
+      imageUrl: '/images/stro.jpeg',
+      description: 'Stro, een goedkoop restproduct uit de landbouw, is 100% biobased, volledig composteerbaar en CO₂-neutraal (−1,28 kg CO₂-eq/kg). Het biedt goede thermische isolatie en heeft een lage LCA-waarde (4,3 kg CO₂-eq/m²). Stro draagt sterk bij aan een circulaire bouweconomie, maar is wel gevoelig voor vocht en schimmelvorming als het niet goed beschermd wordt.',
+      stats: { lca: '4,3 kg CO₂-eq/m²', mki: '€ 0,72/m²', biobased: '100%',  }
+    },
+    'Cellulose': {
+      name: 'Cellulose',
+      imageUrl: '/images/cellulose.jpeg',
+      description: 'Cellulose wordt gemaakt van gerecycled krantenpapier en is circa 75% biobased. Het isoleert goed tegen warmte en geluid, heeft een zeer lage milieubelasting (−1,10 kg CO₂-eq/kg, 1,13 kg CO₂-eq/m²) en een lage MKI (€ 0,02/m²). Het is duurzaam, maar brandgevoelig en slecht bestand tegen vocht zonder behandeling. ',
+      stats: { lca: '1,13 kg CO₂-eq/m²', mki: '€ 0,02/m²', biobased: '75%',  }
+    },
+    'Isovlas': {
+      name: 'Isovlas',
+      imageUrl: '/images/isovlas.jpeg',
+      description: 'Isovlas bestaat uit vlasvezels, een landbouwrestproduct met uitstekende thermische en akoestische isolatie. Het is volledig biobased, herbruikbaar en composteerbaar. Dankzij de negatieve CO₂-balans (−1,10 kg CO₂-eq/kg) en een MKI van € 0,14/m² is het een milieubewuste keuze. Beperkte vochtbestendigheid en afhankelijkheid van oogst zijn nadelen. ',
+      stats: { lca: 'Negatief (CO₂-opslag)', mki: '€ 0,14/m²', biobased: '100%',}
+    }
+  };
+  const meta = materials[displayName] || {
+    name: displayName,
+    imageUrl: '/images/placeholder.png',
+    description: 'Geen informatie beschikbaar voor dit materiaal.',
+    stats: { lca: '-', mki: '-', biobased: '-', health: '-' }
+  };
+%>
+  <main>
+  <br> <!-- Deze BR fixt op een of andere manier witruimte bovern de body tag. NIET WEGHALEN! - Sven  -->
+  <div class="dashboard">
+    <div class="controls">
+      <select id="timeRange">
+        <option value="2"><%= locals.language.sensor.dropdown.h2 %></option>
+        <option value="24"><%= locals.language.sensor.dropdown.h24 %></option>
+        <option value="168"><%= locals.language.sensor.dropdown.w1 %></option>
+
+        <option value="720" selected><%= locals.language.sensor.dropdown.m1 %></option>
+        <option value="8760"><%= locals.language.sensor.dropdown.y1 %></option>
+      </select>
+      <button id="tempBtn" class="active" ><%= locals.language.sensor.temperature %></button>
+      <button id="humBtn"><%= locals.language.sensor.humidity %></button>
+      <button class="compare-btn" onclick="goToCompare()"><%= locals.language.sensor.compare %></button>
+    </div>
+
+    <div class="chart-and-info-container">
+      <div class="main-chart-container zoomable">
+        <canvas id="dataChart"></canvas>
+      </div>
+      <!-- Altijd aanwezig, maar verborgen bij sensorId === 0 -->
+      <div class="radar-chart-container zoomable-radar <%= sensorId === 0 ? 'hidden' : '' %>">
+        <canvas id="sustainabilityRadarChart"></canvas>
+      </div>
+    </div>
+
+    <div class="readings-and-info-container">
+      <div class="current-readings zoomable" id="currentReadings">
+        <h2><%= locals.language.sensor.current_readings %></h2>
+        <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260" width="200"
+          height="200">
+          <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+          <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+          <circle cx="56" cy="52" r="7" fill="#333" />
+          <circle cx="94" cy="119" r="7" fill="#333" />
+          <circle cx="131" cy="185" r="7" fill="#333" />
+
+          <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+          <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+          <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+          <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+          <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+          <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+          <text x="136" y="37" font-size="20" fill="#888">00</text>
+          <text x="174" y="104" font-size="20" fill="#888">00</text>
+          <text x="211" y="170" font-size="20" fill="#888">00</text>
+        </svg>
+      </div>
+      <section class="material-info-section zoomable">
+        <div class="material-info-header">
+          <img src="<%= meta.imageUrl %>" alt="<%= meta.name %>" class="material-image">
+          <h2 class="material-title"><%= meta.name %></h2>
+        </div>
+        <p class="material-content"><%= meta.description %></p>
+        <div class="material-stats">
+          <div class="stat-item"><span class="stat-label">LCA:</span><span><%= meta.stats.lca %></span></div>
+          <div class="stat-item"><span class="stat-label">MKI:</span><span><%= meta.stats.mki %></span></div>
+          <div class="stat-item"><span class="stat-label">Biobased:</span><span><%= meta.stats.biobased %></span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+  </main>

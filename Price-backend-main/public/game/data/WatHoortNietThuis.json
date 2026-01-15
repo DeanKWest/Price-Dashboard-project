@@ -1,0 +1,215 @@
+{
+  "easy": [
+    {
+      "vraag": "Wat hoort NIET thuis in de natuur?",
+      "opties": [
+        { "label": "Bladeren", "image": "bladeren.png" },
+        { "label": "Plastic fles", "image": "plastic-fles.png" },
+        { "label": "Rondslingerende eikels", "image": "eikels.png" },
+        { "label": "Takken", "image": "takken.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIET bij een circulaire wereld?",
+      "opties": [
+        { "label": "Fiets gebruiken", "image": "fiets.png" },
+        { "label": "Laptop repareren", "image": "laptop-repareren.png" },
+        { "label": "Wegwerpbeker", "image": "wegwerpbeker.png" },
+        { "label": "Verpakkingen hergebruiken", "image": "hergebruik-verpakking.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET in de compostbak?",
+      "opties": [
+        { "label": "Appelschillen", "image": "appelschillen.png" },
+        { "label": "Eierschalen", "image": "eierschalen.png" },
+        { "label": "Plastic zakje", "image": "plastic-zakje.png" },
+        { "label": "Bananenschil", "image": "bananenschil.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat doe je NIET met een kapotte telefoon?",
+      "opties": [
+        { "label": "Delen met vrienden", "image": "delen-met-vrienden.png" },
+        { "label": "Laten repareren", "image": "repareren-telefoon.png" },
+        { "label": "In de compostbak gooien", "image": "compostbak-telefoon.png" },
+        { "label": "Naar een winkel brengen om te laten recyclen", "image": "recyclen-winkel.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij duurzaam gebruik van kleding?",
+      "opties": [
+        { "label": "Kleding ruilen", "image": "kleding-ruilen.png" },
+        { "label": "Kleren met verf en olievlekken in kledingbak gooien", "image": "kleding-vervuild.png" },
+        { "label": "Kleding naar tweedehandswinkel brengen", "image": "tweedehandswinkel.png" },
+        { "label": "Kleding delen met broer/zus", "image": "kleding-delen.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIET bij energie besparen?",
+      "opties": [
+        { "label": "Lichten uitdoen", "image": "lichten-uit.png" },
+        { "label": "Was uit de wasmachine buiten laten drogen", "image": "was-buiten.png" },
+        { "label": "Stekkers uit stopcontacten halen", "image": "stekker-uit.png" },
+        { "label": "Wasmachine op 90°C", "image": "wasmachine-90.png" }
+      ],
+      "correct": 3
+    },
+    {
+      "vraag": "Wat is GEEN slim gebruik van spullen?",
+      "opties": [
+        { "label": "Gereedschap lenen van buren", "image": "gereedschap-lenen.png" },
+        { "label": "Fiets delen met gezinsleden", "image": "fiets-delen.png" },
+        { "label": "Iedereen koopt eigen boormachine", "image": "eigen-boormachine.png" },
+        { "label": "Speelgoed ruilen met vrienden", "image": "speelgoed-ruilen.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat helpt NIET tegen verspilling?",
+      "opties": [
+        { "label": "Restjes opeten", "image": "restjes-opeten.png" },
+        { "label": "Repareren in plaats van weggooien", "image": "repareren.png" },
+        { "label": "Alle spullen nieuw kopen", "image": "alles-nieuw.png" },
+        { "label": "Kleding doorgeven aan anderen", "image": "kleding-doorgeven.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat is GEEN voordeel van biobased isolatiemateriaal?",
+      "opties": [
+        { "label": "Het is goed voor het milieu en je gezondheid", "image": "bio-milieu.png" },
+        { "label": "Het houdt je huis warm in de winter", "image": "warm-huis.png" },
+        { "label": "Het houdt inbraak tegen", "image": "inbraak.png" },
+        { "label": "Het zorgt voor frisse lucht in huis", "image": "frisse-lucht.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij duurzaam watergebruik?",
+      "opties": [
+        { "label": "Kraan dichtdraaien tijdens tandenpoetsen", "image": "kraan-dicht.png" },
+        { "label": "Planten water geven met regenwater", "image": "regenwater-planten.png" },
+        { "label": "Kraan laten lopen tijdens afwassen", "image": "kraan-open.png" },
+        { "label": "Douchen in plaats van een bad nemen", "image": "douche.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij het helpen van biodiversiteit?",
+      "opties": [
+        { "label": "Wilde bloemen laten groeien in de tuin", "image": "wilde-bloemen.png" },
+        { "label": "Insectenhotel bouwen", "image": "insectenhotel.png" },
+        { "label": "Vogels voeren in de winter", "image": "vogels-voeren.png" },
+        { "label": "Alle onkruid weghalen uit je tuin", "image": "onkruid-weghalen.png" }
+      ],
+      "correct": 3
+    }
+  ],
+  "hard": [
+    {
+      "vraag": "Wat hoort NIET bij circulair ontwerpen?",
+      "opties": [
+        { "label": "Modulair ontwerp voor makkelijke reparatie", "image": "modulair-ontwerp.png" },
+        { "label": "Ontwerpen voor eenmalig gebruik", "image": "eenmalig-gebruik.png" },
+        { "label": "Alle energie komt van hernieuwbare bronnen", "image": "hernieuwbare-energie.png" },
+        { "label": "Iedereen doet ertoe (’ik zie je’) & wederkerigheid", "image": "wederkerigheid.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIET bij regeneratieve landbouw?",
+      "opties": [
+        { "label": "Bodemkwaliteit verbeteren", "image": "bodemkwaliteit.png" },
+        { "label": "Biodiversiteit stimuleren", "image": "biodiversiteit.png" },
+        { "label": "Kunstmest intensief gebruiken", "image": "kunstmest.png" },
+        { "label": "Organisch materiaal terugbrengen", "image": "organisch-materiaal.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij duurzaam consumeren?",
+      "opties": [
+        { "label": "Producten langer gebruiken", "image": "langer-gebruiken.png" },
+        { "label": "Altijd het nieuwste model kopen", "image": "nieuwste-model.png" },
+        { "label": "Spullen delen met anderen", "image": "delen-met-anderen.png" },
+        { "label": "Je afvragen of je een product wel echt nodig hebt", "image": "twijfel-nodig.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIET bij upcycling?",
+      "opties": [
+        { "label": "Oude materialen een hogere functie geven", "image": "hogere-functie.png" },
+        { "label": "Creativiteit gebruiken voor nieuwe toepassingen", "image": "creatieve-toepassing.png" },
+        { "label": "Materialen terugbrengen tot grondstof", "image": "terug-tot-grondstof.png" },
+        { "label": "Waarde toevoegen aan afgedankte spullen", "image": "waarde-toevoegen.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij duurzaam eten?",
+      "opties": [
+        { "label": "Seizoensgroenten", "image": "seizoensgroenten.png" },
+        { "label": "Verpakte appels uit Nieuw-Zeeland", "image": "appels-nieuwzeeland.png" },
+        { "label": "Restjes opeten", "image": "restjes-opeten.png" },
+        { "label": "Lokale aardappels", "image": "lokale-aardappels.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIET bij de gezondheidsvoordelen van een circulaire economie?",
+      "opties": [
+        { "label": "Minder luchtvervuiling door minder verbranding", "image": "minder-luchtvervuiling.png" },
+        { "label": "Gezonder voedsel door regeneratieve landbouw", "image": "gezonder-voedsel.png" },
+        { "label": "Mensen krijgen energie door het kopen van nieuwe spullen", "image": "energie-door-winkelen.png" },
+        { "label": "Minder blootstelling aan giftige stoffen", "image": "giftige-stoffen.png" }
+      ],
+      "correct": 2
+    },
+    {
+      "vraag": "Wat hoort NIET bij de voordelen van biobased isolatiemateriaal?",
+      "opties": [
+        { "label": "Het verbetert de luchtkwaliteit in huis", "image": "luchtkwaliteit-huis.png" },
+        { "label": "Het helpt tegen hittestress in de zomer", "image": "hittestress.png" },
+        { "label": "Het is altijd goedkoper dan traditionele isolatie", "image": "goedkoopste-optie.png" },
+        { "label": "Het draagt bij aan een gezondere leefomgeving", "image": "gezonde-leefomgeving.png" }
+      ],
+      "correct": 2
+    },
+    {      "vraag": "Wat hoort NIET bij duurzaam watergebruik in huis?",
+      "opties": [
+        { "label": "Regenwater opvangen om je tuin mee te besproeien", "image": "regenwater-tuin.png" },
+        { "label": "Een waterbesparende douchekop gebruiken", "image": "douchekop-besparend.png" },
+        { "label": "Gebruik maken van bodembedekkers en compost zodat de aarde beter water vasthoudt", "image": "bodembedekkers-compost.png" },
+        { "label": "Drinkwater gebruiken om je auto mee te wassen", "image": "auto-met-drinkwater.png" }
+      ],
+      "correct": 3
+    },
+    {
+      "vraag": "Wat hoort NIET bij het bevorderen van biodiversiteit in je omgeving?",
+      "opties": [
+        { "label": "Wilde bloemen planten die bijen en vlinders aantrekken", "image": "wilde-bloemen-bijen.png" },
+        { "label": "Je hele tuin betegelen voor makkelijk onderhoud", "image": "tuin-betegelen.png" },
+        { "label": "Vogelhuisjes en insectenhotels plaatsen in je tuin", "image": "insectenhotel-vogelhuis.png" },
+        { "label": "Inheemse planten kiezen in plaats van exotische soorten", "image": "inheemse-planten.png" }
+      ],
+      "correct": 1
+    },
+    {
+      "vraag": "Wat hoort NIER bij beroepen die ontstaan in de circulaire economie?",
+      "opties": [
+        { "label": "Circulair ontwerper die producten ontwerpt voor hergebruik", "image": "circulair-ontwerper.png" },
+        { "label": "Recyclingtechnoloog die processen voor recycling ontwikkelt en optimaliseert", "image": "recyclingtechnoloog.png" },
+        { "label": "Boekhouder die de financiën bijhoudt voor verschillende bedrijven", "image": "boekhouder.png" },
+        { "label": "Duurzaamheidsadviseur die bedrijven adviseert over grondstoffengebruik", "image": "duurzaamheidsadviseur.png" }
+      ],
+      "correct": 2
+    }
+  ]
+}

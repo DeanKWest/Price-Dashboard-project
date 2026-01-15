@@ -1,0 +1,192 @@
+
+<main>
+        <br> <!-- Deze BR fixt op een of andere manier witruimte bovern de body tag. NIET WEGHALEN! - Sven  -->
+        <div id="weer" class="weer-blok">
+            <h2 id="weer-titel" class="placeholder"></h2>
+            <p id="weer-conditie"></p>
+            <p id="weer-locatie"></p>
+            <p id="weer-temp"></p>
+            <p id="weer-wind"></p>
+            <p id="weer-vocht"></p>
+            <p id="weer-update" style="font-size: 0.9em; color: gray;"></p>
+        </div>
+
+        <!-- Sensor data -->
+        <div id="sensor-container">
+            <a href="/sensors/4" data-spa class="sensor-link">
+                <div id="sensor4" class="sensor-card">
+                    <div class="sensor-title placeholder"></div>
+                    <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260"
+                        width="200" height="200">
+                        <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+                        <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+                        <circle cx="56" cy="52" r="7" fill="#333" />
+                        <circle cx="94" cy="119" r="7" fill="#333" />
+                        <circle cx="131" cy="185" r="7" fill="#333" />
+
+                        <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+                        <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+                        <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+                        <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+                        <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+                        <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+                        <text x="136" y="27" font-size="20" fill="#888">00 °C</text>
+                        <text x="136" y="52" font-size="20" fill="#888">00 %</text>
+                        <text x="174" y="94" font-size="20" fill="#888">00 °C</text>
+                        <text x="174" y="119" font-size="20" fill="#888">00 %</text>
+                        <text x="211" y="160" font-size="20" fill="#888">00 °C</text>
+                        <text x="211" y="185" font-size="20" fill="#888"> 00 %</text>
+                    </svg>
+                    <div class="updated-time placeholder"></div>
+                </div>
+            </a>
+            <a href="/sensors/1" data-spa class="sensor-link">
+                <div id="sensor1" class="sensor-card">
+                    <div class="sensor-title placeholder"></div>
+                    <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260"
+                        width="200" height="200">
+                        <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+                        <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+                        <circle cx="56" cy="52" r="7" fill="#333" />
+                        <circle cx="94" cy="119" r="7" fill="#333" />
+                        <circle cx="131" cy="185" r="7" fill="#333" />
+
+                        <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+                        <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+                        <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+                        <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+                        <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+                        <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+                        <text x="136" y="27" font-size="20" fill="#888">00 °C</text>
+                        <text x="136" y="52" font-size="20" fill="#888">00 %</text>
+                        <text x="174" y="94" font-size="20" fill="#888">00 °C</text>
+                        <text x="174" y="119" font-size="20" fill="#888">00 %</text>
+                        <text x="211" y="160" font-size="20" fill="#888">00 °C</text>
+                        <text x="211" y="185" font-size="20" fill="#888"> 00 %</text>
+                    </svg>
+                    <div class="updated-time placeholder"></div>
+                </div>
+            </a>
+            <a href="/sensors/2" data-spa class="sensor-link">
+                <div id="sensor2" class="sensor-card">
+                    <div class="sensor-title placeholder"></div>
+                    <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260"
+                        width="200" height="200">
+                        <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+                        <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+                        <circle cx="56" cy="52" r="7" fill="#333" />
+                        <circle cx="94" cy="119" r="7" fill="#333" />
+                        <circle cx="131" cy="185" r="7" fill="#333" />
+
+                        <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+                        <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+                        <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+                        <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+                        <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+                        <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+                        <text x="136" y="27" font-size="20" fill="#888">00 °C</text>
+                        <text x="136" y="52" font-size="20" fill="#888">00 %</text>
+                        <text x="174" y="94" font-size="20" fill="#888">00 °C</text>
+                        <text x="174" y="119" font-size="20" fill="#888">00 %</text>
+                        <text x="211" y="160" font-size="20" fill="#888">00 °C</text>
+                        <text x="211" y="185" font-size="20" fill="#888"> 00 %</text>
+                    </svg>
+                    <div class="updated-time placeholder"></div>
+                </div>
+            </a>
+            <a href="/sensors/3" data-spa class="sensor-link">
+                <div id="sensor3" class="sensor-card">
+                    <div class="sensor-title placeholder"></div>
+                    <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260"
+                        width="200" height="200">
+                        <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+                        <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+                        <circle cx="56" cy="52" r="7" fill="#333" />
+                        <circle cx="94" cy="119" r="7" fill="#333" />
+                        <circle cx="131" cy="185" r="7" fill="#333" />
+
+                        <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+                        <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+                        <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+                        <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+                        <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+                        <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+                        <text x="136" y="27" font-size="20" fill="#888">00 °C</text>
+                        <text x="136" y="52" font-size="20" fill="#888">00 %</text>
+                        <text x="174" y="94" font-size="20" fill="#888">00 °C</text>
+                        <text x="174" y="119" font-size="20" fill="#888">00 %</text>
+                        <text x="211" y="160" font-size="20" fill="#888">00 °C</text>
+                        <text x="211" y="185" font-size="20" fill="#888"> 00 %</text>
+                    </svg>
+                    <div class="updated-time placeholder"></div>
+                </div>
+            </a>
+            <a href="/sensors/0" data-spa class="sensor-link">
+                <div id="sensor0" class="sensor-card">
+                    <div class="sensor-title placeholder"></div>
+                    <svg style="overflow: visible;" class="sensor-visual placeholder-svg" viewBox="-15 0 230 260"
+                        width="200" height="200">
+                        <polygon points="
+        20,20
+        200,180
+        167,217
+        -13,57
+      " fill="#eee" stroke="#777" stroke-width="1.5" />
+                        <line x1="-2" y1="0" x2="222" y2="200" stroke="#555" stroke-width="2" />
+                        <circle cx="56" cy="52" r="7" fill="#333" />
+                        <circle cx="94" cy="119" r="7" fill="#333" />
+                        <circle cx="131" cy="185" r="7" fill="#333" />
+
+                        <line x1="56" y1="42" x2="56" y2="32" stroke="#333" stroke-width="2" />
+                        <line x1="56" y1="32" x2="126" y2="32" stroke="#333" stroke-width="2" />
+
+                        <line x1="94" y1="109" x2="94" y2="99" stroke="#333" stroke-width="2" />
+                        <line x1="94" y1="99" x2="164" y2="99" stroke="#333" stroke-width="2" />
+
+                        <line x1="131" y1="175" x2="131" y2="165" stroke="#333" stroke-width="2" />
+                        <line x1="131" y1="165" x2="201" y2="165" stroke="#333" stroke-width="2" />
+
+                        <text x="136" y="27" font-size="20" fill="#888">00 °C</text>
+                        <text x="136" y="52" font-size="20" fill="#888">00 %</text>
+                        <text x="174" y="94" font-size="20" fill="#888">00 °C</text>
+                        <text x="174" y="119" font-size="20" fill="#888">00 %</text>
+                        <text x="211" y="160" font-size="20" fill="#888">00 °C</text>
+                        <text x="211" y="185" font-size="20" fill="#888"> 00 %</text>
+                    </svg>
+                    <div class="updated-time placeholder"></div>
+                </div>
+            </a>
+        </div>
+    </main>

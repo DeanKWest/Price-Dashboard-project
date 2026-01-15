@@ -1,0 +1,28 @@
+{
+  "easy": [
+    { "item": "appelschil.png", "type": "bio" },
+    { "item": "telefoon.png", "type": "techno" },
+    { "item": "oud trui.png", "type": "techno" },
+    { "item": "bananenschil.png", "type": "bio" },
+    { "item": "plastic_beker.png", "type": "techno" },
+    { "item": "karton.png", "type": "bio" },
+    { "item": "batterij.png", "type": "techno" },
+    { "item": "compost.png", "type": "bio" },
+    { "item": "laptop.png", "type": "techno" },
+    { "item": "eierschaal.png", "type": "bio" }
+  ],
+  "hard": [
+    { "item": "theezakje.png", "type": "bio" },
+    { "item": "oude laptop.png", "type": "techno" },
+    { "item": "krant.png", "type": "bio" },
+    { "item": "bananenschil.png", "type": "bio" },
+    { "item": "stofzuiger.png", "type": "techno" },
+    { "item": "etenresten.png", "type": "bio" },
+    { "item": "koptelefoon.png", "type": "techno" },
+    { "item": "compost.png", "type": "bio" },
+    { "item": "batterij.png", "type": "techno" },
+    { "item": "karton.png", "type": "bio" },
+    { "item": "koffie.png", "type": "bio" },
+    { "item": "melkpak.png", "type": "techno" }
+  ]
+}

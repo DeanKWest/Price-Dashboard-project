@@ -1,0 +1,35 @@
+{
+  "name": "price-backend",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "fetchSensorData.ts",
+  "scripts": {
+    "clean": "rimraf build",
+    "build": "tsc --build",
+    "start": "npm run clean && npm run build && node build/index.js",
+    "startNoClean": "npm run build && node build/index.js",
+    "startDev": "npm run clean && npm run build && node build/index.js --development",
+    "startNoCleanDev": "npm run build && node build/index.js --development"
+  },
+  "dependencies": {
+    "@types/websocket": "^1.0.10",
+    "@types/ws": "^8.18.1",
+    "axios": "^1.10.0",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "price-backend": "file:",
+    "websocket": "^1.0.35",
+    "ws": "^8.18.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/websocket": "^1.0.10",
+    "@types/ws": "^8.18.1",
+
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}

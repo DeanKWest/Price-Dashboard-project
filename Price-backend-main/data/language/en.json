@@ -1,0 +1,50 @@
+{
+    "lang": "en",
+    "homepage": {
+        "weather_title": "Weather in Almere",
+        "location": "Location:",
+        "temperature": "Temperature:",
+        "wind": "Wind:",
+        "humidity": "Humidity:",
+        "last_updated": "Last updated:",
+        "last_updated_between": "at"
+    },
+    "sensor": {
+        "dropdown": {
+            "h2": "Last 2 hours",
+            "h24": "Last 24 hours",
+            "w1": "Last week",
+            "m1": "Last month",
+            "y1": "Last year"
+        },
+        "temperature": "Temperature",
+        "humidity": "Humidity",
+        "compare": "Compare materials",
+        "current_readings": "Current readings",
+        "top": "Top",
+        "middle": "Middle",
+        "bottom": "Bottom",
+        "chart": {
+            "impact": "Environmental impact over the entire lifecycle",
+            "geolocation": "Geographical origin",
+            "health_impact": "Health impact",
+            "reuseability": "Reusability",
+            "recyclability": "Recyclability",
+            "co2_emissions": "CO2 emissions during production",
+            "co2_holding": "CO2 storage in material",
+            "biobased": "Biobased percentage"
+        }
+    },
+    "compare": {
+        "dropdown": {
+            "h2": "Last 2 hours",
+            "h24": "Last 24 hours",
+            "w1": "Last week",
+            "m1": "Last month",
+            "y1": "Last year"
+        },
+        "temperature": "Temperature",
+        "humidity": "Humidity",
+        "back": "Back"
+    }
+}

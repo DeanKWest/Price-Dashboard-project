@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sleep naar de juiste bak</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body style="background-image: url('../assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="avatar-bar">
+    <span>Gekozen karakter:</span>
+    <img id="selectedAvatar" class="avatar-preview" src="" alt="">
+  </div>
+
+  <div id="top-bar">
+    <div class="progress-bar">
+      <div id="progressFill" class="progress-fill"></div>
+      <div id="progress-text" class="progress-text">0%</div>
+    </div>
+    <div id="timer" class="timer">30s</div>
+  </div>
+
+  <div class="container">
+    <h2>VlinderTinder</h2>
+    <div class="swipe-bins">
+      <div class="bin bin-left" id="bin-bio">
+        <img src="../assests/bins/bio-bak.png" alt="Bio bak" class="bin-img"><br>
+        Bio
+      </div>
+      <div id="itemContainer" class="swipe-item"></div>
+      <div class="bin bin-right" id="bin-techno">
+        <img src="../assests/bins/techno-bak.png" alt="Techno bak" class="bin-img"><br>
+        Techno
+      </div>
+    </div>
+    <div id="feedback" class="feedback"></div>
+    <div class="swipe-labels"></div>
+  </div>
+
+  <script src="draggame.js"></script>
+  <img src="../assests/vlindermodel.jpg" alt="Vlindermodel" class="vlinder-img">
+</body>
+</html>

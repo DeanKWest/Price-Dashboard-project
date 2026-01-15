@@ -1,0 +1,92 @@
+[
+  {
+    "vraag": "Wist je dat een boormachine gemiddeld gebruikt wordt voor...",
+    "opties": [
+      "13 uur per jaar",
+      "13 minuten in zijn hele leven",
+      "13 dagen per maand",
+      "13 keer per week"
+    ],
+    "antwoord": 1
+  },
+  {
+    "vraag": "Hoeveel aardes hebben we nodig als iedereen leeft zoals in Nederland?",
+    "opties": [
+      "1 aarde",
+      "3-4 aardes",
+      "10 aardes",
+      "Een halve aarde"
+    ],
+    "antwoord": 1
+  },
+  {
+    "vraag": "Waarom is repareren beter dan recyclen?",
+    "opties": [
+      "Het is goedkoper",
+      "Het is sneller",
+      "De waarde van het product blijft behouden",
+      "Het is leuker"
+    ],
+    "antwoord": 2
+  },
+  {
+    "vraag": "Wat kunnen we van bananenschillen maken?",
+    "opties": [
+      "Nieuwe bananen",
+      "Ketchup",
+      "Schroevendraaiers",
+      "Auto's"
+    ],
+    "antwoord": 1
+  },
+  {
+    "vraag": "Wat is refurbishing?",
+    "opties": [
+      "Weggooien",
+      "Opnieuw gebruiken zonder iets te doen",
+      "Opknappen en hergebruiken",
+      "Verkopen zonder reparatie"
+    ],
+    "antwoord": 2
+  },
+  {
+    "vraag": "Wat is upcycling?",
+    "opties": [
+      "Iets ouds weggooien",
+      "Iets ouds gebruiken om iets nieuws en beters van te maken",
+      "Iets verbranden om energie te maken",
+      "Iets kapot maken en uit elkaar halen"
+    ],
+    "antwoord": 1
+  },
+  {
+    "vraag": "Wat is de grootste milieuwinst bij het delen van producten?",
+    "opties": [
+      "Minder spullen hoeven geproduceerd te worden",
+      "Je leert je buren kennen",
+      "Je hoeft minder op te ruimen",
+      "Je spaart geld"
+    ],
+    "antwoord": 0
+  },
+  {
+    "vraag": "Wat gebeurt er vaak met ongebruikte kleding?",
+    "opties": [
+      "Het wordt altijd gerecycled",
+      "Het blijft jarenlang in de kast liggen",
+      "Het wordt automatisch gedoneerd",
+      "Het verandert vanzelf in nieuwe kleding"
+    ],
+    "antwoord": 1
+  },
+  {
+    "vraag": "Waarom is lenen beter dan kopen voor zelden gebruikte spullen?",
+    "opties": [
+      "Je hebt meer spullen in huis",
+      "Het stimuleert de economie",
+      "Het bespaart grondstoffen en energie",
+      "Je hoeft het nooit terug te brengen"
+    ],
+    "antwoord": 2
+  }
+]

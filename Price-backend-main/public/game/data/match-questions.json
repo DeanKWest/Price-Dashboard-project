@@ -1,0 +1,126 @@
+{
+  "easy": [
+    {
+      "left": "Hout",
+      "right": "Bomen",
+      "leftImage": "hout.png",
+      "rightImage": "bomen.png"
+    },
+    {
+      "left": "Glas",
+      "right": "Zand",
+      "leftImage": "glas.png",
+      "rightImage": "zand.png"
+    },
+    {
+      "left": "Papier",
+      "right": "Bomen",
+      "leftImage": "papier.png",
+      "rightImage": "bomen.png"
+    },
+    {
+      "left": "Plastic",
+      "right": "Aardolie",
+      "leftImage": "plastic.png",
+      "rightImage": "aardolie.png"
+    },
+    {
+      "left": "Aluminium",
+      "right": "Bauxiet",
+      "leftImage": "aluminium.png",
+      "rightImage": "bauxiet.png"
+    },
+    {
+      "left": "Biogas",
+      "right": "Tuinafval",
+      "leftImage": "biogas.png",
+      "rightImage": "tuinafval.png"
+    },
+    {
+      "left": "Wol",
+      "right": "Schaap",
+      "leftImage": "wol.png",
+      "rightImage": "schaap.png"
+    },
+    {
+      "left": "Leer",
+      "right": "Koe",
+      "leftImage": "leer.png",
+      "rightImage": "koe.png"
+    },
+    {
+      "left": "Bioplastic",
+      "right": "Mais",
+      "leftImage": "bioplastic.png",
+      "rightImage": "mais.png"
+    },
+    {
+      "left": "IJzererts",
+      "right": "Metaal",
+      "leftImage": "ijzererts.png",
+      "rightImage": "metaal.png"
+    }
+  ],
+  "hard": [
+    {
+      "left": "Metaal",
+      "right": "IJzererts",
+      "leftImage": "metaal.png",
+      "rightImage": "ijzererts.png"
+    },
+    {
+      "left": "Glas",
+      "right": "Zand",
+      "leftImage": "glas.png",
+      "rightImage": "zand.png"
+    },
+    {
+      "left": "Papier",
+      "right": "Bomen",
+      "leftImage": "papier.png",
+      "rightImage": "bomen.png"
+    },
+    {
+      "left": "Plastic",
+      "right": "Aardolie",
+      "leftImage": "plastic.png",
+      "rightImage": "aardolie.png"
+    },
+    {
+      "left": "Leer",
+      "right": "Koeienhuid",
+      "leftImage": "leer.png",
+      "rightImage": "koeienhuid.png"
+    },
+    {
+      "left": "Biogas",
+      "right": "Organisch afval",
+      "leftImage": "biogas.png",
+      "rightImage": "organisch_afval.png"
+    },
+    {
+      "left": "Bioplastic",
+      "right": "Suikerbiet",
+      "leftImage": "bioplastic.png",
+      "rightImage": "suikerbiet.png"
+    },
+    {
+      "left": "Aluminium",
+      "right": "Bauxiet",
+      "leftImage": "aluminium.png",
+      "rightImage": "bauxiet.png"
+    },
+    {
+      "left": "Textiel",
+      "right": "Katoenplant",
+      "leftImage": "textiel.png",
+      "rightImage": "katoenplant.png"
+    },
+    {
+      "left": "Hout",
+      "right": "Bomen",
+      "leftImage": "hout.png",
+      "rightImage": "bomen.png"
+    }
+  ]
+}

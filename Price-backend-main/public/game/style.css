@@ -1,0 +1,979 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../assets/backgrounds/space.gif'); /* <- pas dit pad aan indien nodig */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff; /* witte tekst voor contrast */
+}
+
+.start-card {
+    background-color: white;
+    padding: 100px;
+    border-radius: 80px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    max-width: 400px;
+}
+
+.globe {
+    width: 80%;
+    margin-bottom: 20%;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.title {
+    font-size: 36px;
+    color: #00796b;
+    margin-bottom: 30px;
+    animation: fadeInOut 3s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.start-btn {
+    font-size: 20px;
+    padding: 12px 32px;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.start-btn:hover {
+    background-color: #2e7d32;
+}
+
+.avatar-bar {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.avatar-preview {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 5px;
+}
+
+
+
+.character-options {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.character {
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.6); /* donkere blok achter character */
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.character:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.character img {
+    width: 120px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+}
+
+.character p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    text-shadow: 0 0 5px black;
+}
+.difficulty-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.difficulty-btn {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: #00897b;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.difficulty-btn:hover {
+  background-color: #00695c;
+}
+.mission-text {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 12px 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.antwoord-knop {
+  display: block;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.antwoord-knop:hover {
+  background-color: #388e3c;
+}
+
+.progress-wrapper {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+}
+
+.progress-bar {
+  width: 240px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+  transition: width 0.4s ease;
+}
+
+/* NIEUW: zorg dat tekst altijd in het midden staat */
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  line-height: 25px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+.option-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.92);
+  border: 2.5px solid #1976d2;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  padding: 28px 28px 18px 28px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  min-width: 170px;
+  max-width: 220px;
+  font-size: 1.25em;
+}
+
+.option-btn img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.option-btn span, .option-btn label {
+  margin-top: 8px;
+  font-size: 1.18em;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .option-btn {
+    min-width: 110px;
+    max-width: 140px;
+    padding: 12px 6px 8px 6px;
+    font-size: 1em;
+  }
+  .option-btn img {
+    width: 65px;
+    height: 65px;
+  }
+}
+.timer-text {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+  color: white;
+}
+.progress-bar {
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  color: white;
+  line-height: 20px;
+  transition: width 0.4s ease;
+}
+#antwoorden-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: flex-start; /* zorgt dat knoppen links beginnen */
+}
+.drag-item {
+  font-size: 24px;
+  text-align: center;
+  margin: 30px 0;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  cursor: grab;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 260px;
+  min-width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.drop-zones {
+  display: flex;
+  justify-content: center;
+  gap: 40px; /* reduced gap */
+  margin-top: 20px;
+}
+
+.drop-zone {
+  width: 150px;   /* reduced width */
+  height: 150px;  /* reduced height */
+  border: 3px dashed rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  color: white;
+  font-size: 16px;  /* slightly smaller font */
+  transition: border-color 0.3s ease;
+}
+
+.drop-zone:hover {
+  border-color: #ffffff;
+}
+
+/* Optional: Adjust bin images inside drop zones */
+.drop-zone img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Feedback tekst */
+.feedback {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Voeg toe aan style.css */
+.timer {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* Responsive (optioneel) */
+@media (max-width: 768px) {
+  .drop-zones {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .drop-zone {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+  }
+}
+#top-bar {
+  position: fixed;
+  top: 15px;
+  left: 20px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  z-index: 10;
+}
+
+.progress-bar {
+  width: 200px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.4s ease;
+}
+
+.timer {
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* top bar gecentreerd boven */
+#top-bar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  z-index: 10;
+}
+
+/* progress bar (duurzaamheidsmeter) */
+.progress-bar {
+  width: 240px;
+  height: 25px;
+  background-color: #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.4s ease;
+}
+
+/* timer zonder icoon */
+.timer {
+  font-size: 22px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000;
+}
+
+/* grotere bins */
+.drop-zone {
+  width: 200px;
+  height: 200px;
+}
+
+.drop-zone img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* grotere blok in het midden */
+.drag-item {
+  min-width: 400px;
+  min-height: 280px;
+  font-size: 24px;
+  background-color: white;
+  color: black;
+  padding: 25px;
+  border-radius: 16px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Matchgame stijlen */
+.match-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin: 40px auto 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+.item {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border: 3px solid transparent;
+  border-radius: 14px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover {
+  transform: scale(1.08);
+  border-color: #4caf50;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item.selected {
+  border: 3px solid #4caf50;
+}
+
+.item.matched {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+canvas#lineCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.feedback {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px black;
+}
+
+.progress-bar {
+  width: 240px;
+  height: 25px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  border: 2px solid white;
+}
+
+.progress-fill {
+  background-color: #4caf50;
+  height: 100%;
+  width: 0%;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width 0.4s ease;
+}
+
+.timer {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+}
+.item-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-label {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+  font-weight: bold;
+  text-align: center;
+}
+.footer {
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  text-align: center;
+  padding: 16px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  font-size: 1rem;
+  z-index: 100;
+}
+
+.logo-link .logo {
+  height: 40px;
+  vertical-align: middle;
+}
+.photo-credit {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 8px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 101;
+}
+.floating-home-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  z-index: 1000;
+  transition: opacity 0.2s;
+}
+.floating-home-btn:hover {
+  opacity: 1;
+  background: #f0f0f0;
+}
+.floating-home-btn .logo {
+  height: 40px;
+  width: 40px;
+  position: static;
+  transform: none;
+}
+.floating-home-btn {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.85;
+  z-index: 1000;
+  transition: opacity 0.2s;
+}
+.floating-home-btn:hover {
+  opacity: 1;
+  background: #f0f0f0;
+}
+.floating-home-btn .logo {
+  height: 40px;
+  width: 40px;
+  position: static;
+  transform: none;
+}
+.logo-link {
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+    opacity: 0.8;
+    position: fixed;
+    left: 30px;
+    bottom: 30px;
+    height: 80px;
+    width: 120px;
+    text-decoration: none;
+    background: rgb(248, 248, 248);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: opacity 0.2s;
+}
+.logo-link:hover {
+    opacity: 1;
+}
+.vlinder-container {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+.vlinder-img {
+  position: fixed;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 1400px !important;    /* Forceer breedte */
+  height: 400px !important;   /* Forceer hoogte */
+  object-fit: contain;
+  margin: 0;
+  border-radius: 0;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  pointer-events: none;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  display: block;
+}
+
+.swipe-item {
+  width: 320px;
+  height: 320px;
+  margin: 60px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: none;      /* geen achtergrond */
+  border-radius: 0;      /* geen afgeronde hoeken */
+  box-shadow: none;      /* geen schaduw */
+  transition: none;
+  overflow: visible;
+}
+
+/* Zorg dat het plaatje groot en los staat */
+.swipe-item img {
+  max-width: 350px;
+  max-height: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.swipe-img.swipe-left {
+  animation: swipeLeft 0.6s forwards;
+}
+.swipe-img.swipe-right {
+  animation: swipeRight 0.6s forwards;
+}
+
+@keyframes swipeLeft {
+  100% {
+    transform: translateX(-400px) rotate(-20deg);
+    opacity: 0;
+  }
+}
+@keyframes swipeRight {
+  100% {
+    transform: translateX(400px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* Swipe animaties */
+.swipe-img.swipe-left {
+  animation: swipeLeft 0.6s forwards;
+}
+
+.swipe-img.swipe-right {
+  animation: swipeRight 0.6s forwards;
+}
+
+@keyframes swipeLeft {
+  to {
+    transform: translateX(-1000px) rotate(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes swipeRight {
+  to {
+    transform: translateX(1000px) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+/* Verwijder box/shadow op swipe-afbeelding */
+.swipe-img {
+  box-shadow: none !important;
+  background: none !important;
+  border: none !important;
+}
+
+/* Vlindermodel beter zichtbaar */
+.vlinder-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.vlinder-img {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+/* Swipe item zonder box, schaduw of border */
+.swipe-item {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  margin: 60px auto 0 auto !important;
+  width: auto !important;
+  height: auto !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible !important;
+}
+
+/* Swipe afbeelding groot en los */
+.swipe-img {
+  max-width: 350px;
+  max-height: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Vlindermodel container duidelijk zichtbaar */
+.vlinder-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.vlinder-img {
+  max-width: 320px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+.bin-img {
+  width: 90px;
+  height: 90px;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+.swipe-bins {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90vw;         /* Zorgt dat de bakken bijna tegen de randen staan */
+  max-width: 1200px;   /* Optioneel: maximale breedte op grote schermen */
+  margin: 40px auto 0 auto;
+}
+
+.bin {
+  width: 300px;        /* Maak de bakken groter */
+  min-width: 300px;
+  text-align: center;
+  background: none;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bin-img {
+  width: 350px;        /* Maak de bak-afbeeldingen groter */
+  height: 350px;
+  display: block;
+  margin: 0 auto 8px auto;
+}
+
+@media (max-width: 900px) {
+  .swipe-bins {
+    width: 98vw;
+  }
+  .bin {
+    width: 100px;
+    min-width: 80px;
+  }
+  .bin-img {
+    width: 70px;
+    height: 70px;
+  }
+}
+.container {
+  margin-bottom: 320px; /* Genoeg ruimte voor de grote vlinderfoto */
+}
+.container h2 {
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-size: 2.2em;
+  letter-spacing: 1px;
+}
+.containern {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+    max-width: 900px;
+    margin: 60px auto 0 auto;
+}
+#opties-container {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin: 30px 0 20px 0;
+  flex-wrap: wrap;
+}
+
+.option-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255,255,255,0.92);
+  border: 2.5px solid #1976d2;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  padding: 28px 28px 18px 28px;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+  min-width: 170px;
+  max-width: 220px;
+  font-size: 1.25em;
+}
+
+.option-btn img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  background: #f5f5f5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.option-btn span, .option-btn label {
+  margin-top: 8px;
+  font-size: 1.18em;
+  color: #222;
+  font-weight: 500;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .option-btn {
+    min-width: 110px;
+    max-width: 140px;
+    padding: 12px 6px 8px 6px;
+    font-size: 1em;
+  }
+  .option-btn img {
+    width: 65px;
+    height: 65px;
+  }
+}

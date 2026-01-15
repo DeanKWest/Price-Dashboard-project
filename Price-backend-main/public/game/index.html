@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Red de Wereld</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('assests/space.gif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    <div class="start-card">
+        <img src="assests/globe.gif" alt="Draaiende wereldbol" class="globe">
+        <h1 class="title">help de Wereld</h1>
+        <button id="storyBtn" class="start-btn">Story</button>
+        <button id="freeplayBtn" class="start-btn" style="margin-top: 15px;">Speel los</button>
+        <p class="mission-text">Om de wereld te helpen moet je duurzaamheidsmeter meer dan 75% vol hebben. Doe je best!</p>
+    </div>
+
+    <script>
+        document.getElementById('storyBtn').addEventListener('click', () => {
+            localStorage.removeItem('freeplay');
+            localStorage.removeItem('progressPercent'); // Reset de duurzaamheid balk
+            localStorage.removeItem('quizScore');       // Reset quiz score
+            localStorage.removeItem('dragScore');       // Reset draggame score
+            localStorage.removeItem('matchScore');      // Reset matchgame score
+            window.location.href = 'components/characters.html';
+        });
+
+        document.getElementById('freeplayBtn').addEventListener('click', () => {
+            window.location.href = 'components/freeplay.html';
+        });
+    </script>
+
+    
+    <footer class="main-footer">
+        <a href="/" class="logo-link">
+            <img src="../images/logo.png" alt="Home" style="height:60px; margin:auto;">
+        </a>
+        
+       
+    </footer>
+</body>
+</html>
+
